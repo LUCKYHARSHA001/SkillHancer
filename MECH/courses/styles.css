@@ -54,7 +54,7 @@ body {
     transition: all 0.3s ease;
 }
 
-/* Main Heading and HR */
+
 .main-head {
     font-size: 3rem;
     font-weight: 700;
@@ -83,7 +83,7 @@ hr {
     width: 80%;
 }
 
-/* Card Layout */
+
 .card-containers {
     display: flex;
     flex-wrap: wrap;
@@ -116,7 +116,7 @@ hr {
     border-color: rgba(110, 211, 207, 0.5);
 }
 
-/* Icon Styling */
+
 .carding .icon {
     font-size: 50px;
     margin-bottom: 25px;
@@ -135,7 +135,7 @@ hr {
     flex-grow: 1;
 }
 
-/* Button Styles */
+
 .learning {
     background-color: #6ed3cf;
     color: #1a2a3a;
@@ -178,7 +178,7 @@ hr {
   transform: scale(1.1);
 }
 
-/* Responsive Media Queries */
+
 @media (max-width: 768px) {
     .main-head {
         font-size: 2.5rem;

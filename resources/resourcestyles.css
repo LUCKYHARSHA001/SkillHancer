@@ -13,7 +13,7 @@ body {
   overflow-x: hidden;
 }
 
-/* Neural Canvas Background */
+
 #neural-canvas {
   position: fixed;
   top: 0;
@@ -100,7 +100,7 @@ body {
   width: 100%;
 }
 
-/* Hamburger Menu for Mobile */
+
 .hamburger {
   display: none;
   cursor: pointer;
@@ -116,7 +116,7 @@ body {
   transition: all 0.3s ease-in-out;
 }
 
-/* Sections Styling */
+
 .section {
   padding: 6rem 0;
   position: relative;
@@ -140,7 +140,7 @@ body {
   margin-right: auto;
 }
 
-/* PDF Cards Grid */
+
 .cards-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -173,7 +173,7 @@ body {
   color:  #6ed3cf;
   text-shadow: 0 0 15px  #6ed3cf;
   height: 50px;
-  /* Fixed height for icon container */
+  
 }
 
 .tech-card .icon svg {
@@ -190,7 +190,7 @@ body {
 .tech-card p {
   color:  #e1e8f0;
   flex-grow: 1;
-  /* Allows paragraph to take available space */
+  
   margin-bottom: 1.5rem;
 }
 
@@ -206,7 +206,7 @@ body {
   font-weight: 600;
   transition: all 0.3s ease;
   margin-top: auto;
-  /* Pushes button to the bottom */
+  
 }
 
 .tech-card button:hover {
@@ -216,7 +216,7 @@ body {
   box-shadow: 0 0 15px #FFFFFF;
 }
 
-/* About Section */
+
 .about-content {
   display: flex;
   align-items: center;
@@ -249,7 +249,7 @@ body {
   margin-bottom: 1rem;
 }
 
-/* PDF Modal Styles */
+
 #pdfModal {
   position: fixed;
   inset: 0;
@@ -333,7 +333,7 @@ body {
   border: none;
 }
 
-/* Contact Section */
+
 #contact {
   background-color: #162431;
 }
@@ -400,7 +400,7 @@ body {
   box-shadow: 0 0 15px #FFFFFF;
 }
 
-/* Animation Classes (for JS) */
+
 .animated-item {
   opacity: 0;
   transform: translateY(50px);
@@ -412,7 +412,7 @@ body {
   transform: translateY(0);
 }
 
-/* Responsive Design */
+
 @media (max-width: 992px) {
   .about-content {
     flex-direction: column;

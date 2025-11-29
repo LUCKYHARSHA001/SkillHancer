@@ -1,4 +1,4 @@
-/* General Reset & Body */
+
 * {
     padding: 0;
     margin: 0;
@@ -6,8 +6,8 @@
 }
 
 body {
-    background-color: #1a2a3a; /* Dark background */
-    color: #e1e8f0; /* Light text for readability */
+    background-color: #1a2a3a; 
+    color: #e1e8f0; 
     font-family: 'Poppins', sans-serif;
     overflow-x: hidden;
     display: flex;
@@ -15,7 +15,7 @@ body {
     min-height: 100vh;
 }
 
-/* Animations */
+
 @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
@@ -36,9 +36,9 @@ body {
     to { opacity: 1; transform: translateY(0); }
 }
 
-/* Header Styling */
+
 .header {
-    background-color: rgba(26, 42, 58, 0.7); /* Slightly transparent dark blue */
+    background-color: rgba(26, 42, 58, 0.7); 
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     padding: 15px 30px;
@@ -52,7 +52,7 @@ body {
 
 .header-left h1 {
     font-size: 2.2rem;
-    color: #6ed3cf; /* Accent color */
+    color: #6ed3cf; 
     font-weight: 700;
     text-shadow: 0 0 10px rgba(110, 211, 207, 0.5);
 }
@@ -60,7 +60,7 @@ body {
 .header-center .logo {
     font-size: 2rem;
     font-weight: 700;
-    color: #6ed3cf; /* Accent color */
+    color: #6ed3cf; 
     text-decoration: none;
     text-shadow: 0 0 10px rgba(110, 211, 207, 0.5);
     transition: transform 0.3s ease;
@@ -97,17 +97,17 @@ body {
     color: #FFFFFF;
 }
 
-/* Main Container Layout */
+
 .main-container {
     display: flex;
-    flex: 1; /* Allows main content to grow and push footer down */
-    padding-top: 20px; /* Space below header */
+    flex: 1; 
+    padding-top: 20px; 
 }
 
-/* Sidebar Styling */
+
 .sidebar {
     width: 250px;
-    background-color: rgba(26, 42, 58, 0.8); /* Darker, slightly transparent */
+    background-color: rgba(26, 42, 58, 0.8); 
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
     padding: 20px 0;
@@ -115,9 +115,9 @@ body {
     display: flex;
     flex-direction: column;
     gap: 15px;
-    position: sticky; /* Keeps sidebar in place on scroll */
+    position: sticky; 
     top: 0;
-    height: calc(100vh - 80px); /* Adjust height based on header/footer if needed */
+    height: calc(100vh - 80px); 
     box-shadow: 4px 0 15px rgba(0, 0, 0, 0.2);
     animation: slideInFromLeft 0.7s ease-out;
 }
@@ -138,32 +138,32 @@ body {
 }
 
 .sidebar-button:hover {
-    background-color: rgba(110, 211, 207, 0.1); /* Light hover background */
-    color: #6ed3cf; /* Accent color on hover */
+    background-color: rgba(110, 211, 207, 0.1); 
+    color: #6ed3cf; 
     border-left-color: #6ed3cf;
 }
 
 .sidebar-button.active {
-    background-color: rgba(110, 211, 207, 0.2); /* More prominent active background */
-    color: #6ed3cf; /* Accent color for active */
+    background-color: rgba(110, 211, 207, 0.2); 
+    color: #6ed3cf; 
     border-left-color: #6ed3cf;
     font-weight: 600;
 }
 
 .sidebar-icon {
     font-size: 1.3rem;
-    color: #6ed3cf; /* Accent color for icons */
+    color: #6ed3cf; 
 }
 
-/* Content Area Styling */
+
 .content-area {
-    flex: 1; /* Takes up remaining space */
+    flex: 1; 
     padding: 30px;
     animation: fadeIn 1s ease-out;
 }
 
 .dashboard-section {
-    display: none; /* Hidden by default, shown by JS */
+    display: none; 
     animation: fadeInUp 0.8s ease-out;
 }
 
@@ -184,7 +184,7 @@ body {
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 25px;
     justify-content: center;
-    padding-bottom: 50px; /* Space before footer if content is short */
+    padding-bottom: 50px; 
 }
 
 .dashboard-card {
@@ -192,7 +192,7 @@ body {
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     padding: 25px;
-    padding-bottom: 60px; /* Increased padding to make space for percentage at bottom */
+    padding-bottom: 60px; 
     border-radius: 12px;
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
     border: 1px solid rgba(225, 232, 240, 0.2);
@@ -202,15 +202,15 @@ body {
     color: #FFFFFF;
     transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
     
-    /* Perfect alignment with Flexbox */
+    
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* Pushes content to top, percentage to bottom */
-    align-items: center; /* Centers items horizontally */
+    justify-content: space-between; 
+    align-items: center; 
     
-    min-height: 140px; /* Slightly increase min-height to accommodate percentage comfortably */
-    position: relative; /* For heatmap overlay and percentage positioning */
-    overflow: hidden; /* Ensure heatmap doesn't spill out */
+    min-height: 140px; 
+    position: relative; 
+    overflow: hidden; 
 }
 
 .dashboard-card:hover {
@@ -219,41 +219,41 @@ body {
     border-color: #6ed3cf;
 }
 
-/* Ensures content in card flexes properly */
+
 .card-content-wrapper {
-    flex-grow: 1; /* Allows content to take up available space */
-    display: flex; /* Centers text if multi-line */
+    flex-grow: 1; 
+    display: flex; 
     align-items: center;
     justify-content: center;
-    width: 100%; /* Important for centering */
-    text-align: center; /* Fallback for text alignment */
-    padding-bottom: 10px; /* Small buffer from bottom elements */
+    width: 100%; 
+    text-align: center; 
+    padding-bottom: 10px; 
 }
 
 
-/* Heatmap Overlay Styling */
+
 .heatmap-overlay {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    border-radius: 12px; /* Match card border-radius */
-    pointer-events: none; /* Allows clicks to go through to the card */
-    opacity: 0.1; /* Base opacity */
+    border-radius: 12px; 
+    pointer-events: none; 
+    opacity: 0.1; 
     background: radial-gradient(circle at var(--heatmap-x, 50%) var(--heatmap-y, 50%), 
                                 rgba(110, 211, 207, var(--heatmap-intensity)) 0%, 
                                 transparent 70%);
     animation: pulseHeatmap 3s infinite alternate ease-in-out;
-    z-index: 1; /* Below content but above background */
-    mix-blend-mode: screen; /* Blends nicely with the dark background */
+    z-index: 1; 
+    mix-blend-mode: screen; 
 }
 
-/* Ensure direct text content within card is also correctly layered */
+
 .dashboard-card > *:not(.heatmap-overlay):not(.card-percentage) {
     position: relative;
-    z-index: 2; /* Keep primary content above heatmap overlay */
-    background: transparent; /* Ensure content background is transparent */
+    z-index: 2; 
+    background: transparent; 
 }
 
 
@@ -263,51 +263,51 @@ body {
     100% { transform: scale(0.9); opacity: 0.1; }
 }
 
-/* Percentage Display Styling */
+
 .card-percentage {
-    position: absolute; /* Relative to .dashboard-card */
-    bottom: 15px; /* Distance from the bottom of the card */
-    right: 15px; /* Distance from the right of the card */
+    position: absolute; 
+    bottom: 15px; 
+    right: 15px; 
     font-size: 0.9em;
     font-weight: 600;
-    color: #6ed3cf; /* Use accent color */
-    background-color: rgba(110, 211, 207, 0.15); /* Slightly more prominent background */
-    padding: 6px 10px; /* Increased padding for better visual */
-    border-radius: 8px; /* Slightly more rounded */
-    border: 1px solid rgba(110, 211, 207, 0.4); /* Stronger border for definition */
-    z-index: 3; /* Ensure it's above other elements */
+    color: #6ed3cf; 
+    background-color: rgba(110, 211, 207, 0.15); 
+    padding: 6px 10px; 
+    border-radius: 8px; 
+    border: 1px solid rgba(110, 211, 207, 0.4); 
+    z-index: 3; 
     transition: all 0.3s ease;
-    min-width: 60px; /* Ensure consistent width */
-    text-align: center; /* Center percentage text */
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Subtle shadow */
+    min-width: 60px; 
+    text-align: center; 
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2); 
 }
 
 .dashboard-card:hover .card-percentage {
-    color: #1a2a3a; /* Darker text on hover */
-    background-color: #6ed3cf; /* Solid accent color background on hover */
-    border-color: #06e9e2; /* Accent border on hover */
-    transform: translateY(-3px) scale(1.05); /* Slight lift and scale on hover */
-    box-shadow: 0 4px 10px rgba(110, 211, 207, 0.4); /* Enhanced shadow on hover */
+    color: #1a2a3a; 
+    background-color: #6ed3cf; 
+    border-color: #06e9e2; 
+    transform: translateY(-3px) scale(1.05); 
+    box-shadow: 0 4px 10px rgba(110, 211, 207, 0.4); 
 }
 
 
-/* For progress items, a simpler, less intrusive heatmap */
+
 .progress-item .heatmap-overlay.small {
-    background: rgba(110, 211, 207, var(--heatmap-intensity)); /* Solid color for smaller areas */
-    border-radius: 8px; /* Slightly different radius */
+    background: rgba(110, 211, 207, var(--heatmap-intensity)); 
+    border-radius: 8px; 
     opacity: 0.05;
-    animation: none; /* No pulsing for smaller elements */
+    animation: none; 
     mix-blend-mode: normal;
 }
 .progress-item {
-    position: relative; /* For heatmap positioning */
+    position: relative; 
     overflow: hidden;
-    padding: 15px; /* Adjust padding for heatmap space */
-    border-radius: 10px; /* Match heatmap overlay radius */
+    padding: 15px; 
+    border-radius: 10px; 
 }
 
 
-/* Progress Section Specific Styling (remains mostly same, minor adjustments for heatmap) */
+
 .progress-container {
     display: flex;
     flex-direction: column;
@@ -341,7 +341,7 @@ body {
 
 .progress-bar {
     height: 100%;
-    background: linear-gradient(to right, #6ed3cf, #06e9e2); /* Gradient accent */
+    background: linear-gradient(to right, #6ed3cf, #06e9e2); 
     border-radius: 10px;
     transition: width 0.5s ease-out;
 }
@@ -362,7 +362,7 @@ body {
     font-weight: 600;
     transition: all 0.3s ease;
     margin-top: 20px;
-    align-self: center; /* Center button within flex column */
+    align-self: center; 
 }
 
 .update-progress-btn:hover {
@@ -373,7 +373,7 @@ body {
 }
 
 
-/* Footer (reused from main1.css but explicitly included for completeness) */
+
 .footer {
     background-color: #1a2a3a;
     width: 100%;
@@ -384,7 +384,7 @@ body {
     align-items: center;
     flex-direction: column;
     gap: 30px;
-    margin-top: auto; /* Pushes footer to bottom */
+    margin-top: auto; 
     border-top: 1px solid rgba(225, 232, 240, 0.2);
 }
 
@@ -449,7 +449,7 @@ body {
     color: #7f8c8d;
 }
 
-/* Responsive Media Queries */
+
 @media (max-width: 992px) {
     .sidebar {
         width: 200px;
@@ -473,9 +473,9 @@ body {
         font-size: 2rem;
     }
     .dashboard-card {
-        min-height: 120px; /* Adjusted min-height */
+        min-height: 120px; 
         font-size: 1rem;
-        padding-bottom: 50px; /* Adjusted padding for percentage */
+        padding-bottom: 50px; 
     }
     .card-percentage {
         font-size: 0.8em;
@@ -492,32 +492,32 @@ body {
         padding: 10px 20px;
     }
     .main-container {
-        flex-direction: column; /* Stack sidebar and content on small screens */
+        flex-direction: column; 
         padding-top: 10px;
     }
     .sidebar {
-        width: 100%; /* Full width sidebar */
-        position: static; /* Remove sticky on mobile */
+        width: 100%; 
+        position: static; 
         height: auto;
         border-right: none;
         border-bottom: 1px solid rgba(225, 232, 240, 0.1);
-        flex-direction: row; /* Make sidebar buttons horizontal */
-        flex-wrap: wrap; /* Allow buttons to wrap */
+        flex-direction: row; 
+        flex-wrap: wrap; 
         justify-content: center;
         gap: 10px;
         padding: 15px;
         box-shadow: none;
     }
     .sidebar-button {
-        flex: 1 1 auto; /* Allow buttons to take available space */
-        max-width: 180px; /* Limit individual button width */
+        flex: 1 1 auto; 
+        max-width: 180px; 
         text-align: center;
         justify-content: center;
         padding: 10px 15px;
         font-size: 0.95rem;
     }
     .sidebar-button .sidebar-icon {
-        display: none; /* Hide icons on mobile for compact layout */
+        display: none; 
     }
     .content-area {
         padding: 20px;
@@ -533,8 +533,8 @@ body {
         padding: 20px;
     }
     .dashboard-card {
-        min-height: 110px; /* Adjusted min-height for smaller screens */
-        padding-bottom: 40px; /* Adjusted padding */
+        min-height: 110px; 
+        padding-bottom: 40px; 
     }
     .card-percentage {
         font-size: 0.75em;
@@ -560,7 +560,7 @@ body {
     }
     .dashboard-card {
         font-size: 0.9rem;
-        padding-bottom: 35px; /* Adjusted padding */
+        padding-bottom: 35px; 
     }
     .card-percentage {
         font-size: 0.65em;

@@ -90,7 +90,7 @@ body {
   justify-content: center;
   padding: 20px 40px;
   color: #e1e8f0;
-  background: rgba(225, 232, 240, 0.1); /* Glass effect */
+  background: rgba(225, 232, 240, 0.1); 
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border: 1px solid rgba(225, 232, 240, 0.2);
@@ -109,7 +109,7 @@ body {
 
 .timeline .info a {
   text-decoration: none;
-  color: #6ed3cf; /* Teal accent color */
+  color: #6ed3cf; 
   font-weight: bold;
 }
 
@@ -123,11 +123,11 @@ body {
 }
 
 .timeline ol::-webkit-scrollbar-thumb {
-  background: #6ed3cf; /* Teal scrollbar thumb */
+  background: #6ed3cf; 
 }
 
 .timeline ol::-webkit-scrollbar-track {
-  background: rgba(225, 232, 240, 0.1); /* Glassy scrollbar track */
+  background: rgba(225, 232, 240, 0.1); 
 }
 
 .timeline ol {
@@ -146,7 +146,7 @@ body {
   list-style-type: none;
   width: 160px;
   height: 5px;
-  background: rgba(225, 232, 240, 0.2); /* Muted line color */
+  background: rgba(225, 232, 240, 0.2); 
   scroll-snap-align: start;
 }
 
@@ -168,7 +168,7 @@ body {
   height: 16px;
   transform: translateY(-50%);
   border-radius: 50%;
-  background: #6ed3cf; /* Teal accent color */
+  background: #6ed3cf; 
   z-index: 1;
 }
 
@@ -180,7 +180,7 @@ body {
   font-size: 1rem;
   white-space: normal;
   color: #e1e8f0;
-  background: rgba(26, 42, 58, 0.8); /* Glassy card background */
+  background: rgba(26, 42, 58, 0.8); 
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border: 1px solid rgba(225, 232, 240, 0.2);

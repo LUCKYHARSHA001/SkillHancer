@@ -5,17 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Create Account - SkillHance</title>
-    
-    <!-- Using Google's Poppins font for a clean, modern look -->
+
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    
-    <!-- Font Awesome for all the cool icons -->
+
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <style>
-        /* --- Base Styles --- */
         * {
             margin: 0;
             padding: 0;
@@ -24,8 +23,8 @@
 
         body {
             font-family: 'Poppins', sans-serif;
-            background-color: #1a2a3a; /* Dark blue-grey background */
-            color: #e1e8f0; /* Light, soft text color */
+            background-color: #1a2a3a;
+            color: #e1e8f0;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -34,29 +33,26 @@
             position: relative;
         }
 
-        /* --- Animated Particle Background --- */
         #particle-canvas {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            z-index: -1; /* Keep it behind everything else */
+            z-index: -1;
         }
 
-        /* --- Registration Card --- */
         .register-card {
-            background: rgba(26, 42, 58, 0.6); /* Semi-transparent glass effect */
+            background: rgba(26, 42, 58, 0.6);
             backdrop-filter: blur(15px);
-            -webkit-backdrop-filter: blur(15px); /* For Safari */
-            border: 1px solid rgba(110, 211, 207, 0.3); /* Subtle accent border */
+            -webkit-backdrop-filter: blur(15px);
+            border: 1px solid rgba(110, 211, 207, 0.3);
             border-radius: 20px;
             padding: 40px;
             width: 100%;
             max-width: 500px;
             z-index: 1;
             box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
-            /* A nice little animation to make it pop up */
             animation: slideUpFadeIn 0.8s cubic-bezier(0.23, 1, 0.32, 1);
         }
 
@@ -65,6 +61,7 @@
                 opacity: 0;
                 transform: translateY(50px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -80,7 +77,7 @@
             font-size: 2.5rem;
             color: #fff;
             margin-bottom: 10px;
-            text-shadow: 0 0 10px #6ed3cf; /* A nice glow for the title */
+            text-shadow: 0 0 10px #6ed3cf;
         }
 
         .register-card-header p {
@@ -89,14 +86,12 @@
             opacity: 0.8;
         }
 
-        /* --- Form Styles --- */
         .register-form {
             display: flex;
             flex-direction: column;
             gap: 20px;
         }
 
-        /* --- Input Fields --- */
         .input-group {
             display: flex;
             border-radius: 10px;
@@ -106,7 +101,6 @@
             transition: all 0.3s ease;
         }
 
-        /* When any input inside the group is focused, give the whole group a glow */
         .input-group:focus-within {
             border-color: #6ed3cf;
             box-shadow: 0 0 25px rgba(110, 211, 207, 0.5);
@@ -116,11 +110,9 @@
             position: relative;
             display: flex;
             align-items: center;
-            /* Smooth transition for width changes */
             transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
         }
-        
-        /* The little divider line between the password fields */
+
         .dual-input-group .input-wrapper:first-child::after {
             content: '';
             position: absolute;
@@ -131,21 +123,20 @@
             background-color: rgba(110, 211, 207, 0.3);
             transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
         }
-        
+
         .dual-input-group:focus-within .input-wrapper:first-child::after {
             background-color: #6ed3cf;
             box-shadow: 0 0 4px #6ed3cf;
         }
 
-        /* Hide the divider when one input expands */
         .dual-input-group .input-wrapper.expanded-width:first-child::after {
             opacity: 0;
             transform: translateX(20px);
         }
-        
+
         .input-field {
             width: 100%;
-            padding: 15px 20px 15px 45px; /* Padding to make space for the icon */
+            padding: 15px 20px 15px 45px;
             background: transparent;
             border: none;
             color: #e1e8f0;
@@ -166,17 +157,22 @@
             transition: color 0.3s ease;
         }
 
-        /* Make the icon light up with the accent color on focus */
-        .input-field:focus + i {
+        .input-field:focus+i {
             color: #6ed3cf;
         }
-        
-        /* Classes for the password field animation */
-        .input-wrapper.default-width { width: 50%; }
-        .input-wrapper.expanded-width { width: 65%; }
-        .input-wrapper.shrunk-width { width: 35%; }
 
-        /* --- Checkbox and Links --- */
+        .input-wrapper.default-width {
+            width: 50%;
+        }
+
+        .input-wrapper.expanded-width {
+            width: 65%;
+        }
+
+        .input-wrapper.shrunk-width {
+            width: 35%;
+        }
+
         .form-options {
             display: flex;
             align-items: center;
@@ -190,15 +186,15 @@
             gap: 8px;
             cursor: pointer;
         }
-        
-        /* Hide the default checkbox */
-        .terms-agreement input { display: none; }
 
-        /* Our custom checkbox */
+        .terms-agreement input {
+            display: none;
+        }
+
         .terms-agreement .checkbox {
             width: 18px;
             height: 18px;
-            background: rgba(0,0,0,0.3);
+            background: rgba(0, 0, 0, 0.3);
             border: 1px solid rgba(110, 211, 207, 0.3);
             border-radius: 4px;
             display: flex;
@@ -208,7 +204,6 @@
             flex-shrink: 0;
         }
 
-        /* The checkmark icon inside */
         .terms-agreement .checkbox i {
             color: #6ed3cf;
             font-size: 12px;
@@ -216,17 +211,16 @@
             transform: scale(0.5);
             transition: all 0.3s ease;
         }
-        
-        /* Style for when the checkbox is checked */
-        .terms-agreement input:checked + .checkbox {
+
+        .terms-agreement input:checked+.checkbox {
             background: #6ed3cf;
             border-color: #6ed3cf;
         }
 
-        .terms-agreement input:checked + .checkbox i {
+        .terms-agreement input:checked+.checkbox i {
             opacity: 1;
             transform: scale(1);
-            color: #1a2a3a; /* Use the dark bg color for the checkmark */
+            color: #1a2a3a;
         }
 
         .terms-link {
@@ -236,20 +230,20 @@
             transition: text-shadow 0.3s ease;
         }
 
-        .terms-link:hover { text-shadow: 0 0 25px rgba(110, 211, 207, 0.5); }
+        .terms-link:hover {
+            text-shadow: 0 0 25px rgba(110, 211, 207, 0.5);
+        }
 
-        /* --- Error Message --- */
         .error-message {
-            color: #ff6b6b; /* A nice, visible red for errors */
+            color: #ff6b6b;
             font-size: 0.9rem;
             text-align: center;
-            margin-top: -10px; /* Pull it a bit closer to the inputs */
+            margin-top: -10px;
             margin-bottom: -5px;
-            display: none; /* Hidden by default */
+            display: none;
             transition: opacity 0.3s ease;
         }
 
-        /* --- Buttons & Final Link --- */
         .signup-button {
             padding: 15px;
             border-radius: 10px;
@@ -267,8 +261,10 @@
             transform: translateY(-3px);
             box-shadow: 0 0 25px rgba(110, 211, 207, 0.5);
         }
-        
-        .signup-button:active { transform: translateY(0); }
+
+        .signup-button:active {
+            transform: translateY(0);
+        }
 
         .login-link {
             text-align: center;
@@ -283,12 +279,14 @@
             transition: text-shadow 0.3s ease;
         }
 
-        .login-link a:hover { text-shadow: 0 0 25px rgba(110, 211, 207, 0.5); }
+        .login-link a:hover {
+            text-shadow: 0 0 25px rgba(110, 211, 207, 0.5);
+        }
     </style>
 </head>
 
 <body>
-    <!-- This canvas is for the cool animated background -->
+
     <canvas id="particle-canvas"></canvas>
 
     <div class="register-card">
@@ -300,23 +298,26 @@
         <form id="register-form" class="register-form" novalidate>
             <div class="input-group">
                 <div class="input-wrapper" style="width: 100%;">
-                    <input type="email" id="email" name="email" placeholder="Email Address" required class="input-field">
+                    <input type="email" id="email" name="email" placeholder="Email Address" required
+                        class="input-field">
                     <i class="fas fa-envelope"></i>
                 </div>
             </div>
 
             <div class="input-group dual-input-group" id="password-group">
                 <div class="input-wrapper" id="password-wrapper">
-                    <input type="password" id="password" name="password" placeholder="Password" required class="input-field">
+                    <input type="password" id="password" name="password" placeholder="Password" required
+                        class="input-field">
                     <i class="fas fa-lock"></i>
                 </div>
                 <div class="input-wrapper" id="repassword-wrapper">
-                    <input type="password" id="repassword" name="repassword" placeholder="Confirm Password" required class="input-field">
+                    <input type="password" id="repassword" name="repassword" placeholder="Confirm Password" required
+                        class="input-field">
                     <i class="fas fa-check-circle"></i>
                 </div>
             </div>
-            
-            <!-- This is where our new error message will appear -->
+
+
             <p id="error-message" class="error-message"></p>
 
             <div class="form-options">
@@ -341,7 +342,7 @@
         // This whole section just creates the moving dots in the background.
         const canvas = document.getElementById('particle-canvas');
         const ctx = canvas.getContext('2d');
-        
+
         let particles;
 
         // A single particle
@@ -445,7 +446,7 @@
             // Reset classes first
             passwordWrapper.className = "input-wrapper";
             repasswordWrapper.className = "input-wrapper";
-            
+
             // Then add the correct classes based on which input is focused
             if (focusedElementId === "password") {
                 passwordWrapper.classList.add("expanded-width");
@@ -477,10 +478,10 @@
         const registerForm = document.getElementById('register-form');
         const errorMessage = document.getElementById('error-message');
 
-        registerForm.addEventListener('submit', function(e) {
+        registerForm.addEventListener('submit', function (e) {
             // Stop the form from submitting the old-fashioned way
-            e.preventDefault(); 
-            
+            e.preventDefault();
+
             // Hide any previous error messages
             errorMessage.style.display = 'none';
 
@@ -493,11 +494,11 @@
                 errorMessage.style.display = 'block';
                 return; // Stop the function here
             }
-            
+
             // If everything is okay, you can proceed with form submission
             // For this demo, we'll just log it and redirect.
             console.log('Form is valid! Submitting...');
-            window.location.href = "logincheck.html"; 
+            window.location.href = "logincheck.html";
         });
 
         // A nice little touch: hide the error message as soon as the user starts correcting it.
@@ -506,4 +507,5 @@
 
     </script>
 </body>
+
 </html>

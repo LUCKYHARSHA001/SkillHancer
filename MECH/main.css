@@ -160,7 +160,7 @@ hr {
 
 .tech-card .icon {
     font-size: 40px;
-    /* color: #6ed3cf; */
+    
     margin-bottom: 20px;
     text-shadow: 0 0 15px #6ed3cf;
 }
@@ -233,7 +233,7 @@ hr {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     z-index: 99;
     border-radius: 8px;
-    /* margin-top: 5px; */
+    
     border: 1px solid rgba(225, 232, 240, 0.2);
     overflow: hidden;
 }
@@ -420,7 +420,7 @@ hr {
     color: #7f8c8d;
 }
 
-/* Dots background */
+
 #dots-bg {
     position: fixed;
     top: 0;
@@ -431,12 +431,12 @@ hr {
     display: block;
 }
 
-/* Tech cards layout */
+
 .tech-card.new-pathways-card {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* Default for larger screens */
+    
     margin-left: 40%;
     margin-top: 20px;
     box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
@@ -471,7 +471,7 @@ hr {
 
 }
 
-/* --- Mobile Menu Styles --- */
+
 .mobiles-options {
     position: fixed;
     top: 0px;
@@ -490,12 +490,12 @@ hr {
     box-shadow: 5px 0 15px rgba(0, 0, 0, 0.3);
     border-right: 1px solid rgba(225, 232, 240, 0.2);
     overflow-y: auto;
-    -ms-overflow-style: none; /* IE and Edge */
-    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; 
+    scrollbar-width: none; 
 }
 
 .mobiles-options::-webkit-scrollbar {
-    display: none; /* Chrome, Safari, Opera */
+    display: none; 
 }
 
 .mobiles-options span {
@@ -546,7 +546,7 @@ hr {
 }
 
 
-/* Hide hamburger by default (for larger screens, i.e., > 1024px) */
+
 .bars {
     display: none;
     color: white;
@@ -556,11 +556,11 @@ hr {
     margin-right: 15px;
 }
 
-/* Responsive Media Queries */
 
-/* Tablet & Smaller Desktop (1024px and below) - Activation of Mobile Header and Card Adjustments */
+
+
 @media (max-width: 1440px) {
-    /* Hide standard header elements */
+    
     .preheader .left-actions .dropdown,
     .preheader .left-actions .dropdown-container,
     .preheader .left-actions .dev-mode-sec,
@@ -573,43 +573,43 @@ hr {
         display: none;
     }
 
-    /* Show hamburger icon */
+    
     .bars {
         display: block;
-        order: -1; /* Place it at the beginning of left-actions */
-        margin-right: 0; /* Remove previous margin */
+        order: -1; 
+        margin-right: 0; 
     }
 
-    /* Adjust layout for remaining header elements */
+    
     .preheader {
         justify-content: space-between;
         padding: 10px 15px;
     }
 
     .main-logo {
-        flex-grow: 1; /* Allow logo to take available space */
-        text-align: center; /* Center logo */
+        flex-grow: 1; 
+        text-align: center; 
     }
 
     .preheader-right {
         gap: 15px;
     }
 
-    /* Adjustments for tech cards for smaller screens */
+    
     .tech-card {
-        flex: 0 0 calc(50% - 20px); /* Two cards per row */
+        flex: 0 0 calc(50% - 20px); 
     }
 
-    /* Specific adjustment for the 'Explore Abroad Paths' card at 1024px */
+    
     .tech-card.new-pathways-card {
-        margin-left: auto; /* Center the card */
-        margin-right: auto; /* Center the card */
-        width: calc(50% - 20px); /* Maintain width for two cards per row */
-        max-width: 350px; /* Optional: cap max width for aesthetics */
+        margin-left: auto; 
+        margin-right: auto; 
+        width: calc(50% - 20px); 
+        max-width: 350px; 
     }
 }
 @media (max-width: 1024px) {
-    /* Hide standard header elements */
+    
     .preheader .left-actions .dropdown,
     .preheader .left-actions .dropdown-container,
     .preheader .left-actions .dev-mode-sec,
@@ -622,50 +622,50 @@ hr {
         display: none;
     }
 
-    /* Show hamburger icon */
+    
     .bars {
         display: block;
-        order: -1; /* Place it at the beginning of left-actions */
-        margin-right: 0; /* Remove previous margin */
+        order: -1; 
+        margin-right: 0; 
     }
 
-    /* Adjust layout for remaining header elements */
+    
     .preheader {
         justify-content: space-between;
         padding: 10px 15px;
     }
 
     .main-logo {
-        flex-grow: 1; /* Allow logo to take available space */
-        text-align: center; /* Center logo */
+        flex-grow: 1; 
+        text-align: center; 
     }
 
     .preheader-right {
         gap: 15px;
     }
 
-    /* Adjustments for tech cards for smaller screens */
+    
     .tech-card {
-        flex: 0 0 calc(50% - 20px); /* Two cards per row */
+        flex: 0 0 calc(50% - 20px); 
     }
 
-    /* Specific adjustment for the 'Explore Abroad Paths' card at 1024px */
+    
     .tech-card.new-pathways-card {
-        margin-left: auto; /* Center the card */
-        margin-right: auto; /* Center the card */
-        width: calc(50% - 20px); /* Maintain width for two cards per row */
-        max-width: 350px; /* Optional: cap max width for aesthetics */
+        margin-left: auto; 
+        margin-right: auto; 
+        width: calc(50% - 20px); 
+        max-width: 350px; 
     }
 }
 
-/* Mobile Devices (768px and below) */
+
 @media (max-width: 768px) {
     .intro-matter {
         font-size: 2.5rem;
         margin-top: 80px;
     }
 
-    /* Ensure cards stack on smaller mobiles */
+    
     .tech-card-container {
         flex-direction: column;
         align-items: center;
@@ -688,16 +688,16 @@ hr {
         text-align: center;
     }
 
-    /* Ensure 'Explore Abroad Paths' card stacks properly with others */
+    
     .tech-card.new-pathways-card {
-        margin-left: auto; /* Ensure it stays centered */
+        margin-left: auto; 
         margin-right: auto;
-        width: 90%; /* Take full width minus padding */
+        width: 90%; 
         max-width: 350px;
     }
 }
 
-/* Even Smaller Mobile Devices (480px and below) */
+
 @media (max-width: 480px) {
     .intro-matter {
         font-size: 2rem;
@@ -705,7 +705,7 @@ hr {
     }
 
     .tech-card {
-        flex: 0 0 calc(100% - 20px); /* One card per row */
+        flex: 0 0 calc(100% - 20px); 
     }
 
     .preheader {
@@ -732,6 +732,6 @@ hr {
         height: 45px;
     }
     .tech-card.new-pathways-card {
-        width: calc(100% - 20px); /* Adjust to full width minus padding */
+        width: calc(100% - 20px); 
     }
 }

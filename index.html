@@ -24,9 +24,7 @@
             --glow-shadow: 0 0 2.5rem rgba(110, 211, 207, 0.5);
             --card-bg: rgba(225, 232, 240, 0.05);
             font-size: 16px;
-            /* Define base font size for rem units */
 
-            /* Dark theme variables - These will be overridden when .dark-theme is active */
             --dark-primary-bg: #0b132b;
             --dark-primary-text: #e0f2f7;
             --dark-glass-bg: rgba(11, 19, 43, 0.6);
@@ -34,7 +32,6 @@
             --dark-card-bg: rgba(224, 242, 247, 0.05);
         }
 
-        /* Dark theme styles */
         body.dark-theme {
             --primary-bg: var(--dark-primary-bg);
             --primary-text: var(--dark-primary-text);
@@ -59,12 +56,9 @@
             color: var(--primary-text);
             overflow-x: hidden;
             padding-top: 5rem;
-            /* Converted from 80px */
             transition: background-color 0.3s ease, color 0.3s ease;
-            /* Smooth theme transition */
         }
 
-        /* --- Animated Background --- */
         #particle-canvas {
             position: fixed;
             top: 0;
@@ -74,7 +68,6 @@
             z-index: -1;
         }
 
-        /* --- Header --- */
         .site-header {
             width: 100%;
             padding: 1.25rem 5%;
@@ -122,45 +115,34 @@
             position: relative;
         }
 
-        /* Updated Small Logo Styling */
         .small-logo {
             position: absolute;
             left: 0;
             height: 4rem;
-            /* Increased size (was 2.5rem) */
             border-radius: 1rem;
-            /* Added rounded corners */
             margin-right: 1rem;
             filter: drop-shadow(0 0 0.625rem rgba(110, 211, 207, 0.6));
-            /* Subtle background glow */
             transition: all 0.3s ease-in-out;
-            /* Smooth transition for any potential hover effects */
         }
 
         .logo {
             font-size: 1.8rem;
-            /* Kept as rem, relative to root */
             font-weight: 700;
             color: #fff;
             text-shadow: 0 0 0.625rem var(--accent-color);
-            /* Converted from 10px */
             text-decoration: none;
         }
 
         .container {
             width: 90%;
             max-width: 75rem;
-            /* Converted from 1200px */
             margin: 0 auto;
             padding: 6.25rem 0;
-            /* Converted from 100px */
         }
 
-        /* --- Section Animation --- */
         .section {
             opacity: 0;
             transform: translateY(3.125rem);
-            /* Converted from 50px */
             transition: opacity 0.8s ease-out, transform 0.8s ease-out;
         }
 
@@ -169,10 +151,8 @@
             transform: translateY(0);
         }
 
-        /* --- Hero Section --- */
         .hero-section {
             min-height: calc(100vh - 80px);
-            /* Adjust for header height */
             display: flex;
             align-items: center;
             justify-content: center;
@@ -190,7 +170,6 @@
         .hero-image {
             width: 100%;
             max-width: 450px;
-            /* UPDATED: Smoother transition for the "bend" effect */
             transition: transform 0.2s cubic-bezier(0.23, 1, 0.32, 1);
             filter: drop-shadow(0 0 30px rgba(110, 211, 207, 0.3));
         }
@@ -216,7 +195,6 @@
 
         .hero-image:hover {
             transform: scale(1.03) rotate(3deg);
-            /* Slightly larger and rotated on hover */
         }
 
         @keyframes heroImagePop {
@@ -233,33 +211,24 @@
             }
         }
 
-        .hero-content {
-            flex: 1.2;
-        }
-
         .hero-content h1 {
             font-size: 3.5rem;
             font-weight: 700;
             color: #fff;
             line-height: 1.2;
             margin-bottom: 1.25rem;
-            /* Converted from 20px */
             text-shadow: 0 0 0.9375rem var(--accent-color);
-            /* Converted from 15px */
         }
 
         .hero-content p {
             font-size: 1.5rem;
             opacity: 0.9;
             margin-bottom: 1.875rem;
-            /* Converted from 30px */
         }
 
         .cta-button {
             padding: 0.9375rem 1.875rem;
-            /* Converted from 15px 30px */
             border-radius: 0.625rem;
-            /* Converted from 10px */
             border: none;
             background: var(--accent-color);
             color: var(--primary-bg);
@@ -268,32 +237,26 @@
             cursor: pointer;
             transition: all 0.3s ease;
             box-shadow: 0 0.3125rem 0.9375rem rgba(110, 211, 207, 0.2);
-            /* Converted from 0 5px 15px */
             text-decoration: none;
             display: inline-block;
         }
 
         .cta-button:hover {
             transform: translateY(-0.1875rem);
-            /* Converted from -3px */
             box-shadow: var(--glow-shadow);
         }
 
-        /* --- General Section Styling --- */
         .section-title {
             text-align: center;
             font-size: 2.8rem;
             margin-bottom: 3.75rem;
-            /* Converted from 60px */
             color: var(--accent-color);
             text-shadow: var(--glow-shadow);
         }
 
-        /* --- Staggered Card Animation --- */
         .animated-card {
             opacity: 0;
             transform: translateY(1.875rem) scale(0.95);
-            /* Converted from 30px */
             transition: opacity 0.6s ease-out, transform 0.6s ease-out;
         }
 
@@ -302,48 +265,32 @@
             transform: translateY(0) scale(1);
         }
 
-        /* --- Branches Section --- */
         .branches-grid {
             display: grid;
-            /* Default for larger screens: 3 columns */
             grid-template-columns: repeat(3, 1fr);
             gap: 1.875rem;
-            /* Converted from 30px */
             align-items: stretch;
         }
 
-        /* Media Query for screens where you want 2 columns in the second row (e.g., medium screens) */
         @media (max-width: 75rem) {
-
-            /* Example breakpoint, adjust as needed, converted from 1200px */
             .branches-grid {
-                /* When there are only 5 cards, this will naturally push the last two to the second row */
                 grid-template-columns: repeat(auto-fit, minmax(13.75rem, 1fr));
             }
         }
 
-        /* For smaller screens, revert to 2 columns (or 1 if preferred) */
         @media (max-width: 56.25rem) {
-
-            /* Converted from 900px */
             .branches-grid {
                 grid-template-columns: repeat(auto-fit, minmax(13.75rem, 1fr));
-                /* Ensures at least 2 columns if space, otherwise 1 */
             }
         }
-
 
         .branch-card {
             background: var(--card-bg);
             border: 0.0625rem solid var(--glass-border);
-            /* Converted from 1px */
             border-radius: 0.9375rem;
-            /* Converted from 15px */
             padding: 1.875rem 1.25rem;
-            /* Converted from 30px 20px */
             text-align: center;
             backdrop-filter: blur(0.625rem);
-            /* Converted from 10px */
             cursor: pointer;
             overflow: hidden;
             transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
@@ -353,18 +300,14 @@
 
         .branch-card:hover {
             transform: translateY(-0.625rem) !important;
-            /* Converted from -10px */
             border-color: var(--accent-color);
             box-shadow: 0 0.625rem 1.875rem rgba(0, 0, 0, 0.4);
-            /* Converted from 0 10px 30px */
         }
 
         .branch-card i {
             font-size: 3rem;
-            /* Kept as rem, relative to root */
             color: var(--accent-color);
             margin-bottom: 0.9375rem;
-            /* Converted from 15px */
             text-shadow: var(--glow-shadow);
             transition: all 0.4s ease;
         }
@@ -375,19 +318,15 @@
 
         .branch-card h3 {
             font-size: 1.3rem;
-            /* Kept as rem, relative to root */
             font-weight: 600;
             color: #fff;
             margin-bottom: 0.625rem;
-            /* Converted from 10px */
         }
 
         .card-intro {
             font-size: 0.9rem;
-            /* Kept as rem, relative to root */
             opacity: 0.7;
             margin-bottom: 1.25rem;
-            /* Converted from 20px */
             transition: all 0.4s ease;
             flex-grow: 1;
         }
@@ -395,7 +334,6 @@
         .branch-card:hover .card-intro {
             opacity: 0;
             transform: translateY(-0.625rem);
-            /* Converted from -10px */
         }
 
         .expanded-content {
@@ -407,36 +345,27 @@
 
         .branch-card:hover .expanded-content {
             max-height: 12.5rem;
-            /* Converted from 200px */
             opacity: 1;
         }
 
         .expanded-content p {
             font-size: 0.95rem;
-            /* Kept as rem, relative to root */
             line-height: 1.5;
         }
 
-        /* --- Resources Section --- */
         .resources-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(17.5rem, 1fr));
-            /* Converted from 280px */
             gap: 1.875rem;
-            /* Converted from 30px */
             align-items: stretch;
         }
 
         .resource-card {
             background: var(--card-bg);
             border: 0.0625rem solid var(--glass-border);
-            /* Converted from 1px */
             border-radius: 0.9375rem;
-            /* Converted from 15px */
             padding: 1.875rem;
-            /* Converted from 30px */
             backdrop-filter: blur(0.625rem);
-            /* Converted from 10px */
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -445,61 +374,46 @@
 
         .resource-card i {
             font-size: 2.5rem;
-            /* Kept as rem, relative to root */
             color: var(--accent-color);
             margin-bottom: 0.9375rem;
-            /* Converted from 15px */
         }
 
         .resource-card h3 {
             font-size: 1.5rem;
-            /* Kept as rem, relative to root */
             color: var(--accent-color);
             margin-bottom: 0.625rem;
-            /* Converted from 10px */
         }
 
         .resource-card p {
             font-size: 1rem;
-            /* Kept as rem, relative to root */
             flex-grow: 1;
             margin-bottom: 1.25rem;
-            /* Converted from 20px */
             opacity: 0.8;
         }
 
-        /* --- International Pathways Section --- */
         .pathways-container {
             background: var(--card-bg);
             border: 0.0625rem solid var(--glass-border);
-            /* Converted from 1px */
             border-radius: 0.9375rem;
-            /* Converted from 15px */
             padding: 2.5rem;
-            /* Converted from 40px */
             backdrop-filter: blur(0.625rem);
-            /* Converted from 10px */
             text-align: center;
         }
 
         .pathways-selector {
             display: flex;
             gap: 1.25rem;
-            /* Converted from 20px */
             align-items: center;
             justify-content: center;
             margin-bottom: 2.5rem;
-            /* Converted from 40px */
             flex-wrap: wrap;
         }
 
         .pathways-selector label {
             font-size: 1.2rem;
-            /* Kept as rem, relative to root */
             font-weight: 600;
         }
 
-        /* --- Custom Dropdown Style --- */
         .custom-select-wrapper {
             position: relative;
             display: inline-block;
@@ -507,12 +421,10 @@
 
         .custom-select-wrapper::after {
             content: '\f078';
-            /* Font Awesome down arrow */
             font-family: 'Font Awesome 6 Free';
             font-weight: 900;
             position: absolute;
             right: 1.25rem;
-            /* Converted from 20px */
             top: 50%;
             transform: translateY(-50%);
             color: var(--accent-color);
@@ -521,15 +433,11 @@
 
         #branch-select {
             padding: 0.75rem 2.8125rem 0.75rem 1.25rem;
-            /* Converted from 12px 45px 12px 20px */
             background: rgba(0, 0, 0, 0.3);
             border: 0.0625rem solid var(--glass-border);
-            /* Converted from 1px */
             border-radius: 0.5rem;
-            /* Converted from 8px */
             color: var(--accent-color);
             font-size: 1rem;
-            /* Kept as rem, relative to root */
             outline: none;
             cursor: pointer;
             -webkit-appearance: none;
@@ -538,68 +446,48 @@
             transition: border-color 0.3s ease;
         }
 
-        /* Styles for the options within the dropdown */
         #branch-select option {
             background-color: #1a2a3a;
             color: #ffffff;
-            /* Black text */
         }
 
-        /* Style for hovered/focused options (some browsers might apply this) */
         #branch-select option:hover,
         #branch-select option:focus {
             background-color: #003366;
-            /* Slightly lighter dark blue on hover */
             color: #FFFFFF;
-            /* White text on hover for better contrast */
         }
 
         #pathways-results {
             display: flex;
             justify-content: center;
             gap: 1.5625rem;
-            /* Converted from 25px */
             flex-wrap: wrap;
             margin-bottom: 2.5rem;
-            /* Converted from 40px */
         }
 
         .country-advert-card {
             background: var(--card-bg);
-            /* Changed from primary-bg to card-bg for consistency */
             border-radius: 0.625rem;
-            /* Converted from 10px */
             padding: 1.25rem;
-            /* Converted from 20px */
             border: 0.0625rem solid var(--glass-border);
-            /* Converted from 1px */
             width: 9.375rem;
-            /* Converted from 150px */
             text-align: center;
             flex-shrink: 0;
-            /* Prevent shrinking if space is tight */
             flex-grow: 0;
-            /* Prevent growing */
         }
 
         .country-advert-card i {
             font-size: 2.5rem;
-            /* Kept as rem, relative to root */
             color: var(--accent-color);
             margin-bottom: 0.9375rem;
-            /* Converted from 15px */
         }
 
         .country-advert-card h3 {
             font-size: 1.2rem;
-            /* Kept as rem, relative to root */
         }
 
-        /* Toggle switch specific styles */
-        /* Toggle switch specific styles */
         .toggle-checkbox {
             display: none;
-            /* Hide the default checkbox */
         }
 
         .toggle-label {
@@ -609,7 +497,6 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            /* This will still influence ball movement */
             padding: 0.3125rem;
             position: relative;
             height: 1.625rem;
@@ -618,7 +505,6 @@
             border: 0.0625rem solid var(--accent-color);
             transition: background-color 0.3s ease, border-color 0.3s ease;
             overflow: hidden;
-            /* Important to hide icon when ball covers it if needed */
         }
 
         .toggle-label .ball {
@@ -631,47 +517,33 @@
             width: 1.25rem;
             transition: transform 0.2s linear;
             z-index: 2;
-            /* Ensure the ball is above the icon if they overlap */
         }
 
         .toggle-checkbox:checked+.toggle-label .ball {
             transform: translateX(1.5rem);
         }
 
-        /* Icon styling */
         #theme-icon {
             font-size: 0.8rem;
             position: absolute;
             top: 50%;
             transform: translateY(-50%);
-            /* Adjust for vertical centering */
             transition: all 0.3s ease;
-            /* Transition for position and color */
             z-index: 1;
-            /* Icon below the ball */
         }
 
-        /* Initial state for sun icon (light theme) */
         body.light-theme #theme-icon {
             right: 0.3125rem;
-            /* Position sun on the right for light theme */
             color: #f39c12;
-            /* Orange for sun */
             opacity: 1;
-            /* Ensure sun is visible in light theme */
         }
 
-        /* State for moon icon (dark theme) */
         body.dark-theme #theme-icon {
             left: 0.3125rem;
-            /* Position moon on the left for dark theme */
             color: #f1c40f;
-            /* Yellow for moon */
             opacity: 1;
-            /* Ensure moon is visible in dark theme */
         }
 
-        /* Hide the icon that is not active */
         body.light-theme #theme-icon.fa-moon {
             opacity: 0;
         }
@@ -680,26 +552,19 @@
             opacity: 0;
         }
 
-        /* Light/Dark Mode Specific Icon Colors */
         .fa-moon {
             color: #f1c40f;
-            /* Yellow for moon */
         }
 
         .fa-sun {
             color: #f39c12;
-            /* Orange for sun */
         }
 
-        /* --- Responsive Design --- */
         @media (max-width: 56.25rem) {
-
-            /* Converted from 900px */
             .hero-section {
                 flex-direction: column;
                 text-align: center;
                 padding-top: 3.125rem;
-                /* Converted from 50px */
                 min-height: auto;
             }
 
@@ -718,40 +583,29 @@
             .site-header {
                 flex-direction: column;
                 padding: 0.9375rem 5%;
-                /* Converted from 15px */
                 gap: 0.625rem;
-                /* Converted from 10px */
             }
 
             .logo-container {
                 width: 100%;
                 justify-content: center;
-                /* Center main logo */
             }
 
             .small-logo {
                 position: static;
-                /* Remove absolute positioning on small screens */
                 margin-right: 0.625rem;
-                /* Converted from 10px */
                 height: 3rem;
-                /* Adjusted for smaller screens */
                 border-radius: 0.8rem;
             }
         }
 
-        /* Media Query for 2560 x 1808px and larger screens */
         @media (min-width: 125rem) {
-
-            /* This targets screens 2000px and wider */
             :root {
                 font-size: 20px;
-                /* Increased from 18px to 20px for a larger global font size */
             }
 
             body {
                 font-size: 1em;
-                /* This remains relative to the new root font size (20px) */
             }
 
             .site-header {
@@ -762,7 +616,6 @@
                 font-size: 2.2rem;
             }
 
-            /* Small logo specifically for this large breakpoint */
             .small-logo {
                 height: 5rem;
                 border-radius: 1.2rem;
@@ -842,73 +695,48 @@
             }
         }
 
-
-
-        /* Media Query for 768px x 904px */
         @media (min-width: 768px) and (max-width: 904px) and (min-height: 904px) {
             .site-header {
                 flex-direction: row;
-                /* Ensure elements are in a row */
                 justify-content: space-between;
-                /* Push logo left, toggle right */
                 padding: 1.25rem 5%;
-                /* Keep original padding, or adjust as needed */
             }
 
             .logo-container {
                 justify-content: flex-start;
-                /* Align logo to the start (left) */
                 flex-grow: 0;
-                /* Prevent it from taking extra space */
                 width: auto;
-                /* Allow content to dictate width */
             }
 
             .small-logo {
                 display: none;
-                /* Hide the small logo image */
             }
 
             .logo {
                 margin-left: 0;
-                /* Remove any previous margin */
                 font-size: 1.8rem;
-                /* Keep original font size or adjust */
             }
 
             .toggle-container {
                 margin-left: auto;
-                /* Push to the right if not already there */
             }
 
             .toggle-label {
                 transform: scale(1.2);
-                /* Make toggle button slightly smaller than default 1.5, adjust as needed */
                 height: 1.4rem;
-                /* Adjusted based on scale */
                 width: 2.7rem;
-                /* Adjusted based on scale */
             }
 
             .toggle-checkbox:checked+.toggle-label .ball {
                 transform: translateX(1.3rem);
-                /* Adjust ball position for smaller size */
             }
         }
 
-
-
-        /* --- Responsive Design --- */
-
-        /* Existing smaller screen media query (adjusted to hide small-logo) */
         @media (max-width: 56.25rem) {
-
-            /* Converted from 900px */
             .hero-section {
                 flex-direction: column;
                 text-align: center;
                 padding-top: 3.125rem;
-                /* Converted from 50px */
                 min-height: auto;
             }
 
@@ -926,109 +754,77 @@
 
             .site-header {
                 flex-direction: column;
-                /* Keep as column for this general breakpoint */
                 padding: 0.9375rem 5%;
-                /* Converted from 15px */
                 gap: 0.625rem;
-                /* Converted from 10px */
             }
 
             .logo-container {
                 width: 100%;
                 justify-content: center;
-                /* Center main logo */
             }
 
             .small-logo {
                 display: none;
-                /* Hide the small logo image on all smaller screens */
             }
-
-            /* No need to set toggle styles here if the next media query handles it */
         }
 
-        /* Media Query for 768px x 904px */
         @media (min-width: 768px) and (max-width: 904px) and (min-height: 904px) {
             .site-header {
                 flex-direction: row;
-                /* Ensure elements are in a row */
                 justify-content: space-between;
-                /* Push logo left, toggle right */
                 padding: 1.25rem 5%;
-                /* Keep original padding, or adjust as needed */
             }
 
             .logo-container {
                 justify-content: flex-start;
-                /* Align logo to the start (left) */
                 flex-grow: 0;
-                /* Prevent it from taking extra space */
                 width: auto;
-                /* Allow content to dictate width */
             }
 
             .small-logo {
                 display: none;
-                /* Hide the small logo image */
             }
 
             .logo {
                 margin-left: 0;
-                /* Remove any previous margin */
                 font-size: 1.8rem;
-                /* Keep original font size or adjust */
             }
 
             .toggle-container {
                 margin-left: auto;
-                /* Push to the right if not already there */
             }
 
             .toggle-label {
                 transform: scale(1.2);
-                /* Make toggle button slightly smaller than default 1.5, adjust as needed */
                 height: 1.4rem;
-                /* Adjusted based on scale */
                 width: 2.7rem;
-                /* Adjusted based on scale */
             }
 
             .toggle-checkbox:checked+.toggle-label .ball {
                 transform: translateX(1.3rem);
-                /* Adjust ball position for smaller size */
             }
         }
 
-
-        /* NEW: Media Query for 425px, 375px, 320px and below */
         @media (max-width: 425px) {
-
-            /* This will apply to 425px, 375px, 320px, and anything smaller */
             .site-header {
                 flex-direction: row;
-                /* Make sure it's row for left/right alignment */
                 justify-content: space-between;
-                /* Push logo left, toggle right */
                 padding: 0.9375rem 4%;
-                /* Slightly less padding for very small screens */
             }
 
             .logo-container {
                 justify-content: flex-start;
-                /* Align logo to the start (left) */
                 flex-grow: 0;
                 width: auto;
             }
 
             .small-logo {
                 display: none;
-                /* Explicitly hide the small logo */
             }
 
             .logo {
                 margin-left: 0;
                 font-size: 1.5rem;
-                /* Make SkillHance text a bit smaller for very small screens */
             }
 
             .toggle-container {
@@ -1037,45 +833,35 @@
 
             .toggle-label {
                 transform: scale(1);
-                /* Even smaller toggle button, back to original scale */
                 height: 1.3rem;
-                /* Adjusted size */
                 width: 2.5rem;
-                /* Adjusted size */
             }
 
             .toggle-checkbox:checked+.toggle-label .ball {
                 transform: translateX(1.2rem);
-                /* Adjust ball position */
             }
 
-            /* Further adjustments for very small screens (optional) */
             .hero-content h1 {
                 font-size: 2.2rem;
-                /* Smaller hero title */
             }
 
             .hero-content p {
                 font-size: 1rem;
-                /* Smaller hero paragraph */
             }
 
             .cta-button {
                 padding: 0.75rem 1.5rem;
-                /* Smaller CTA button */
                 font-size: 1rem;
             }
 
             .section-title {
                 font-size: 1.8rem;
-                /* Smaller section titles */
                 margin-bottom: 2.5rem;
             }
 
             .branches-grid,
             .resources-grid {
                 grid-template-columns: 1fr;
-                /* Stack cards vertically on very small screens */
             }
 
             .branch-card,

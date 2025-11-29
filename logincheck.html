@@ -5,18 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login - SkillHance</title>
-    
-    <!-- Google Fonts: Poppins -->
+
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    
-    <!-- Font Awesome for Icons -->
+
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="icon" type="image/png" href="Fav-icon-Skillhance.png">
 
     <style>
-        /* --- Base Styles & Variables --- */
         :root {
             --primary-bg: #1a2a3a;
             --primary-text: #e1e8f0;
@@ -45,7 +44,6 @@
             position: relative;
         }
 
-        /* --- Animated Background --- */
         #particle-canvas {
             position: fixed;
             top: 0;
@@ -55,7 +53,6 @@
             z-index: -1;
         }
 
-        /* --- Login Card Styling --- */
         .login-card {
             background: var(--glass-bg);
             backdrop-filter: blur(15px);
@@ -64,7 +61,7 @@
             border-radius: 20px;
             padding: 40px;
             width: 100%;
-            max-width: 500px; /* Increased width for side-by-side inputs */
+            max-width: 500px;
             z-index: 1;
             box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
             animation: slideUpFadeIn 0.8s cubic-bezier(0.23, 1, 0.32, 1);
@@ -75,6 +72,7 @@
                 opacity: 0;
                 transform: translateY(50px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -99,14 +97,12 @@
             opacity: 0.8;
         }
 
-        /* --- Form Styling --- */
         .login-form {
             display: flex;
             flex-direction: column;
-            gap: 25px; /* Increased gap */
+            gap: 25px;
         }
 
-        /* --- Side-by-Side Input Group --- */
         .dual-input-group {
             display: flex;
             border-radius: 10px;
@@ -125,10 +121,9 @@
             position: relative;
             display: flex;
             align-items: center;
-            /* UPDATED: Changed to 'all' for a more complete transition */
             transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
         }
-        
+
         .input-wrapper:first-child::after {
             content: '';
             position: absolute;
@@ -137,17 +132,14 @@
             height: 50%;
             width: 1px;
             background-color: var(--glass-border);
-            /* UPDATED: Changed to 'all' for a more complete transition */
             transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
         }
-        
-        /* NEW: Make the divider glow when either input is active */
+
         .dual-input-group:focus-within .input-wrapper:first-child::after {
             background-color: var(--accent-color);
             box-shadow: 0 0 4px var(--accent-color);
         }
 
-        /* UPDATED: When email input expands, the divider now fades and moves out */
         .input-wrapper.expanded-width:first-child::after {
             opacity: 0;
             transform: translateX(20px);
@@ -176,15 +168,21 @@
             transition: color 0.3s ease;
         }
 
-        .input-field:focus + i {
+        .input-field:focus+i {
             color: var(--accent-color);
         }
-        
-        /* Classes for JS to control width */
-        .input-wrapper.default-width { width: 50%; }
-        .input-wrapper.expanded-width { width: 65%; }
-        .input-wrapper.shrunk-width { width: 35%; }
 
+        .input-wrapper.default-width {
+            width: 50%;
+        }
+
+        .input-wrapper.expanded-width {
+            width: 65%;
+        }
+
+        .input-wrapper.shrunk-width {
+            width: 35%;
+        }
 
         .form-options {
             display: flex;
@@ -199,13 +197,15 @@
             gap: 8px;
             cursor: pointer;
         }
-        
-        .remember-me input { display: none; }
+
+        .remember-me input {
+            display: none;
+        }
 
         .remember-me .checkbox {
             width: 18px;
             height: 18px;
-            background: rgba(0,0,0,0.3);
+            background: rgba(0, 0, 0, 0.3);
             border: 1px solid var(--glass-border);
             border-radius: 4px;
             display: flex;
@@ -221,13 +221,13 @@
             transform: scale(0.5);
             transition: all 0.3s ease;
         }
-        
-        .remember-me input:checked + .checkbox {
+
+        .remember-me input:checked+.checkbox {
             background: var(--accent-color);
             border-color: var(--accent-color);
         }
 
-        .remember-me input:checked + .checkbox i {
+        .remember-me input:checked+.checkbox i {
             opacity: 1;
             transform: scale(1);
             color: var(--primary-bg);
@@ -239,7 +239,9 @@
             transition: text-shadow 0.3s ease;
         }
 
-        .forgot-password:hover { text-shadow: var(--glow-shadow); }
+        .forgot-password:hover {
+            text-shadow: var(--glow-shadow);
+        }
 
         .signin-button {
             padding: 15px;
@@ -258,8 +260,10 @@
             transform: translateY(-3px);
             box-shadow: var(--glow-shadow);
         }
-        
-        .signin-button:active { transform: translateY(0); }
+
+        .signin-button:active {
+            transform: translateY(0);
+        }
 
         .signup-link {
             text-align: center;
@@ -274,12 +278,14 @@
             transition: text-shadow 0.3s ease;
         }
 
-        .signup-link a:hover { text-shadow: var(--glow-shadow); }
+        .signup-link a:hover {
+            text-shadow: var(--glow-shadow);
+        }
     </style>
 </head>
 
 <body>
-    <!-- Dynamic Particle Background -->
+
     <canvas id="particle-canvas"></canvas>
 
     <div class="login-card">
@@ -291,11 +297,13 @@
         <form id="loginform" class="login-form">
             <div class="dual-input-group">
                 <div class="input-wrapper" id="email-wrapper">
-                    <input type="email" id="email" name="email" placeholder="Email Address" required class="input-field">
+                    <input type="email" id="email" name="email" placeholder="Email Address" required
+                        class="input-field">
                     <i class="fas fa-envelope"></i>
                 </div>
                 <div class="input-wrapper" id="password-wrapper">
-                    <input type="password" id="password" name="password" placeholder="Password" required class="input-field">
+                    <input type="password" id="password" name="password" placeholder="Password" required
+                        class="input-field">
                     <i class="fas fa-lock"></i>
                 </div>
             </div>
@@ -433,7 +441,7 @@
 
 
         // --- Form Submission Logic ---
-        document.getElementById('loginform').addEventListener('submit', function(e) {
+        document.getElementById('loginform').addEventListener('submit', function (e) {
             e.preventDefault();
             console.log('Form submitted!');
             window.location.href = "../check.html";

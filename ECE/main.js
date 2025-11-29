@@ -17,16 +17,16 @@ function to_resourcespage() {
     window.location.href = "../resources/ECEresource.html";
 }
 
-// Mobile Menu Functions
+
 function closeM() {
-    document.querySelector('.mobiles-options').style.left = "-280px"; // Use querySelector
+    document.querySelector('.mobiles-options').style.left = "-280px"; 
 }
 
 function openM() {
-    document.querySelector('.mobiles-options').style.left = "0px"; // Use querySelector
+    document.querySelector('.mobiles-options').style.left = "0px"; 
 }
 
-// Dots Background Animation
+
 const canvas = document.getElementById('dots-bg');
 const ctx = canvas.getContext('2d');
 let dots = [];
@@ -59,7 +59,7 @@ function animateDots() {
     for (let dot of dots) {
         dot.x += dot.dx;
         dot.y += dot.dy;
-        // Bounce off edges
+        
         if (dot.x < 0 || dot.x > canvas.width) dot.dx *= -1;
         if (dot.y < 0 || dot.y > canvas.height) dot.dy *= -1;
         ctx.beginPath();

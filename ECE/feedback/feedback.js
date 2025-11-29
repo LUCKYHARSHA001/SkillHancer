@@ -39,10 +39,10 @@ function addFeedback(text) {
   feedbackList.prepend(feedbackBox);
 }
 
-// Preloaded feedbacks
+
 ["Great service!", "Website is a bit slow.", "Loved the support team!"].forEach(fb => addFeedback(fb));
 
-// Dot animation
+
 const canvas = document.getElementById("dots-bg");
 const ctx = canvas.getContext("2d");
 let dots = [];

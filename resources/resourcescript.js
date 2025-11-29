@@ -1,6 +1,6 @@
 
         document.addEventListener('DOMContentLoaded', function () {
-            // --- Mobile Navigation ---
+            
             const hamburger = document.getElementById('hamburger');
             const navLinks = document.getElementById('nav-links');
             hamburger.addEventListener('click', () => {
@@ -8,7 +8,7 @@
                 navLinks.classList.toggle('active');
             });
 
-            // --- Scroll Animations ---
+            
             const animatedItems = document.querySelectorAll('.animated-item');
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
@@ -19,7 +19,7 @@
             }, { threshold: 0.1 });
             animatedItems.forEach(item => observer.observe(item));
 
-            // --- PDF Modal Logic ---
+            
             const viewPdfButtons = document.querySelectorAll('.view-pdf-btn');
             const modal = document.getElementById('pdfModal');
             const closeModalBtn = document.getElementById('closeModalBtn');
@@ -55,7 +55,7 @@
                 if (event.key === 'Escape') closeModal();
             });
 
-            // --- Neural Network Canvas Animation ---
+            
             const canvas = document.getElementById('neural-canvas');
             const ctx = canvas.getContext('2d');
             let particlesArray;

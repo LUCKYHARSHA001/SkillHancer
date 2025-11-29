@@ -419,6 +419,6 @@ body {
   }
 }
 .discipline-card-link {
-    text-decoration: none; /* Removes the underline */
-    color: inherit;       /* Makes the text inherit its color from the parent */
+    text-decoration: none; 
+    color: inherit;       
 }

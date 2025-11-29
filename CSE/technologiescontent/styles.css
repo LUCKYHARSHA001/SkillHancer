@@ -3,14 +3,14 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
-  /* Changed font for consistency */
+  
 }
 
 body {
   background: #1a2a3a;
-  /* Target background color */
+  
   color: #e1e8f0;
-  /* Target text color */
+  
 }
 
 .sidebar {
@@ -18,7 +18,7 @@ body {
   width: 220px;
   height: 100vh;
   background-color: rgba(26, 42, 58, 0.8);
-  /* Glassy dark blue */
+  
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border-right: 1px solid rgba(225, 232, 240, 0.2);
@@ -42,9 +42,9 @@ body {
 .h2-div {
   position: fixed;
   background-color: #1a2a3a;
-  /* Match body to hide scrolling content */
+  
   width: 200px;
-  /* Ensure it covers the width */
+  
   z-index: 10;
 }
 
@@ -81,7 +81,7 @@ body {
 
 .sidebar a:hover {
   background-color: rgba(110, 211, 207, 0.2);
-  /* Teal hover */
+  
   color: #fff;
 }
 
@@ -113,14 +113,14 @@ body {
   font-size: 26px;
   margin-bottom: 20px;
   border-left: 6px solid #6ed3cf;
-  /* Teal accent */
+  
   padding-left: 15px;
   font-weight: 600;
   color: #6ed3cf;
-  /* Unified color */
+  
 }
 
-/* Unifying all level title colors to the new accent color */
+
 .level-title.beginner,
 .level-title.intermediate,
 .level-title.advanced,
@@ -144,7 +144,7 @@ body {
 
 .card {
   background-color: rgba(225, 232, 240, 0.1);
-  /* Glassy card */
+  
   backdrop-filter: blur(15px);
   -webkit-backdrop-filter: blur(15px);
   padding: 20px;
@@ -159,7 +159,7 @@ body {
 
 .card:hover {
   transform: translateY(-5px);
-  /* box-shadow: 0 0 25px rgba(110, 211, 207, 0.4); */
+  
   background-color: rgba(225, 232, 240, 0.15);
   cursor: pointer;
 }

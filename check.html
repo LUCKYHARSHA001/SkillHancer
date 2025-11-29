@@ -37,7 +37,6 @@
       position: relative;
     }
 
-    /* Keyframe animations for dynamic entry */
     @keyframes fadeIn {
       from { opacity: 0; }
       to { opacity: 1; }
@@ -59,7 +58,6 @@
       100% { transform: translateY(-100vh) rotate(360deg); opacity: 0; }
     }
 
-    /* --- Background Elements --- */
     #particle-canvas {
       position: fixed;
       top: 0;
@@ -89,8 +87,7 @@
       animation: float linear infinite;
       list-style: none;
     }
-    
-    /* Staggering animations for floating symbols */
+ 
     .symbol:nth-child(1) { left: 10%; animation-duration: 15s; animation-delay: 0s; }
     .symbol:nth-child(2) { left: 20%; animation-duration: 17s; animation-delay: 2s; font-size: 2rem; }
     .symbol:nth-child(3) { left: 30%; animation-duration: 20s; animation-delay: 4s; }
@@ -101,7 +98,6 @@
     .symbol:nth-child(8) { left: 80%; animation-duration: 14s; animation-delay: 0.5s; }
     .symbol:nth-child(9) { left: 90%; animation-duration: 21s; animation-delay: 2.5s; font-size: 3.5rem; }
 
-    /* --- Main Content --- */
     .container {
       padding: 40px 20px;
       position: relative;
@@ -139,14 +135,13 @@
         animation-fill-mode: backwards;
     }
 
-    /* --- Card Grid & Card Styling --- */
     .card-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 30px;
       max-width: 1200px;
       margin: 0 auto;
-      perspective: 1000px; /* For 3D hover effect */
+      perspective: 1000px; 
     }
 
     .card {
@@ -166,10 +161,9 @@
       gap: 20px;
       min-height: 250px;
       animation: fadeInUp 1s ease-out;
-      animation-fill-mode: backwards; /* Keeps element in final state */
+      animation-fill-mode: backwards; 
     }
-    
-    /* Staggered card animation */
+   
     .card:nth-child(1) { animation-delay: 0.3s; }
     .card:nth-child(2) { animation-delay: 0.4s; }
     .card:nth-child(3) { animation-delay: 0.5s; }
@@ -203,7 +197,6 @@
         text-shadow: 0 0 20px var(--accent-color);
     }
     
-    /* Responsive Design */
     @media (max-width: 768px) {
         .welcome-section h1 {
             font-size: 2.8rem;
@@ -227,10 +220,10 @@
 </head>
 
 <body>
-  <!-- Dynamic Particle Background -->
+  
   <canvas id="particle-canvas"></canvas>
 
-  <!-- Animated Floating Symbols -->
+  
   <ul class="floating-symbols">
     <li class="symbol"><i class="fas fa-code"></i></li>
     <li class="symbol"><i class="fas fa-microchip"></i></li>
@@ -276,7 +269,7 @@
   </div>
 
   <script>
-    // --- Particle Canvas Animation Script ---
+   
     const canvas = document.getElementById('particle-canvas');
     const ctx = canvas.getContext('2d');
     canvas.width = window.innerWidth;
